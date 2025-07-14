@@ -49,9 +49,7 @@ html,body{
     src: url("/Assets/Fonts/Manrope-ExtraLight.ttf");
 }
 
-
 /* Page Styles */
-
 #page1{
     width:100vw;
     min-height:100vh;
@@ -89,8 +87,7 @@ html,body{
     background-color: #E8E4D9;
 }
 
-/* Navbar  */
-
+/* Navbar */
 #navbar {
   width: 100vw;
   height: 9vh;
@@ -99,11 +96,12 @@ html,body{
   justify-content: space-between;
   align-items: center;
   padding: 0 2vw;
+  z-index: 1000;
 }
 
 #logo {
   font-family: "manropeExtraBold";
-  font-size: 2vw;
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
   font-weight: 900;
   color: #1D202B;
   text-decoration: none;
@@ -113,6 +111,12 @@ html,body{
   display: flex;
   align-items: center;
   gap: 2vw;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #000;
+    font-size: clamp(0.9rem, 1.5vw, 1.2rem);
 }
 
 /* Hamburger Menu */
@@ -144,10 +148,7 @@ html,body{
   background-color: #fff;
 }
 
-#menu a {
-    text-decoration: none;
-    color: #000;
-}
+/* Hero Section */
 #hero{
     width: 100vw;
     min-height: 100vh;
@@ -155,77 +156,124 @@ html,body{
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    padding: 0 2vw;
 }
+
 #hero h1{
-    font-size: 180px;
+    font-size: clamp(3rem, 12vw, 11rem);
     font-family: "melodramaLight";
     font-weight: 100;
     line-height: 1;
 }
+
 #hero h2{
-    font-size: 100px;
+    font-size: clamp(1.5rem, 6vw, 6rem);
     font-family: "manropeBold";
-    letter-spacing: -5px;
+    letter-spacing: -2px;
 }
+
 #hero img{
-    width:16vw;
-    height: 100vh;
-    margin-top: 10vw ;
+    width: clamp(200px, 16vw, 300px);
+    height: 60vh;
+    margin-top: 5vh;
     border-top-left-radius: 200px;
     border-top-right-radius: 200px;
     object-fit: cover;
 }
+
 #hero #text{
     text-align: center;
-    margin-top: 35vh;
+    margin-top: 15vh;
 }
-#page2 #left,#page2 #right{
+
+/* Page 2 Styles */
+#page2 #left, #page2 #right{
     width: 50%;
     height: 100%;
 }
+
 #page2 #left h1{
-    font-size: 240px;
+    font-size: clamp(3rem, 15vw, 15rem);
     font-family: "melodramaSemiBold";
     color: #171B26;
 }
+
 #page2 #left{
     padding-top: 8vh;
-    padding-left: 15vw;
+    padding-left: 8vw;
+    padding-right: 2vw;
 }
+
 #page2 #left p{
-    font-size: 24px;
-    color:#171B26 ;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color:#171B26;
     font-family: "manropeLight";
-    line-height: 40px;
+    line-height: 1.6;
+    margin-top: 2vh;
 }
+
 #page2 #right{
-    padding-top: 38vh;
-    padding-right: 15vw;
-    padding-left: 4vw;
+    padding-top: 20vh;
+    padding-right: 8vw;
+    padding-left: 2vw;
 }
+
 #page2 #right p{
-    font-size: 24px;
-    color:#171B26 ;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color:#171B26;
     font-family: "manropeLight";
-    line-height: 40px;
+    line-height: 1.6;
 }
-#classic-a , #mini-a{
+
+#page2 #right h1{
+    font-size: clamp(3rem, 15vw, 15rem);
+    font-family: "melodramaSemiBold";
+    color: #171B26;
+    margin-left: -2vw;
+    margin-top: 3vh;
+}
+
+#page2 #left span{
+    font-size: clamp(1.2rem, 2vw, 2rem);
+    margin-top: 3vh;
+    color: #171B26;
+    font-family: "melodramaBold";
+    display: inline-block;
+}
+
+#page2 #left #cla{
+    text-decoration: underline;   
+}
+
+#page2 #left #mi{
+    margin-left: 2vw;
+}
+
+/* Button Styles */
+#classic-a, #mini-a{
     text-decoration: none;
-    padding: 1.5vw 4vw;
-    border-radius:100px;
-    font-size: 32.4px;
-    font-family:"melodramaRegular";
+    padding: clamp(0.8rem, 1.5vw, 1.5rem) clamp(2rem, 4vw, 4rem);
+    border-radius: 100px;
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-family: "melodramaRegular";
     color: #E8E4D9;
+    display: inline-block;
+    transition: transform 0.3s ease;
 }
+
+#classic-a:hover, #mini-a:hover {
+    transform: scale(1.05);
+}
+
 #mini-a{
     margin-left: 1vw;
-    padding: 1.5vw 5vw;
     background-image: url("/Assets/Images/mini.png");
     background-size: cover;
     background-position: center;
     overflow: hidden;
     position: relative;
 }
+
 #classic-a{
     background-image: url("/Assets/Images/classic.png");
     background-size: cover;
@@ -233,6 +281,7 @@ html,body{
     overflow: hidden;
     position: relative;
 }
+
 #classic-a::before{
     content:"";
     position: absolute;
@@ -244,6 +293,7 @@ html,body{
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
 }
+
 #mini-a::before{
     content:"";
     position: absolute;
@@ -255,26 +305,207 @@ html,body{
     background-color: rgba(0,0,0,0.6);
     z-index: 1;
 }
-#classic-a span , #mini-a span{
+
+#classic-a span, #mini-a span{
     z-index: 2;
     position: relative;
 }
-#page2 #right h1{
-    font-size: 240px;
-    font-family: "melodramaSemiBold";
-    color: #171B26;
-    margin-left: -4vw;
-    margin-top:5vw;
+
+/* Tablet Styles */
+@media screen and (max-width: 1024px) {
+    #hero h1{
+        font-size: clamp(2.5rem, 10vw, 8rem);
+    }
+    
+    #hero h2{
+        font-size: clamp(1.2rem, 5vw, 4rem);
+    }
+    
+    #hero img{
+        width: clamp(180px, 20vw, 280px);
+        height: 50vh;
+    }
+    
+    #page2 #left h1, #page2 #right h1{
+        font-size: clamp(2.5rem, 12vw, 10rem);
+    }
+    
+    #page2 #left{
+        padding-left: 5vw;
+    }
+    
+    #page2 #right{
+        padding-right: 5vw;
+        padding-top: 15vh;
+    }
 }
-#page2 #left span{
-    font-size: 34px;
-    margin-top: 60vh;
-    color: #171B26;
-    font-family: "melodramaBold";
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    #navbar {
+        height: 8vh;
+        padding: 0 4vw;
+    }
+    
+    #logo {
+        font-size: 1.5rem;
+    }
+    
+    #menu {
+        gap: 4vw;
+    }
+    
+    #menu a {
+        font-size: 1rem;
+    }
+    
+    #hamburger {
+        height: 18px;
+        width: 25px;
+    }
+    
+    #hero {
+        padding: 0 4vw;
+    }
+    
+    #hero h1{
+        font-size: clamp(2rem, 8vw, 5rem);
+    }
+    
+    #hero h2{
+        font-size: clamp(1rem, 4vw, 2.5rem);
+        letter-spacing: -1px;
+    }
+    
+    #hero img{
+        width: clamp(150px, 30vw, 250px);
+        height: 40vh;
+        margin-top: 3vh;
+    }
+    
+    #hero #text{
+        margin-top: 10vh;
+    }
+    
+    #page2 {
+        flex-direction: column;
+        min-height: auto;
+    }
+    
+    #page2 #left, #page2 #right{
+        width: 100%;
+        min-height: 50vh;
+    }
+    
+    #page2 #left{
+        padding: 5vh 6vw 3vh 6vw;
+    }
+    
+    #page2 #right{
+        padding: 3vh 6vw 5vh 6vw;
+    }
+    
+    #page2 #left h1, #page2 #right h1{
+        font-size: clamp(2rem, 10vw, 6rem);
+        margin-left: 0;
+        margin-top: 2vh;
+    }
+    
+    #page2 #left p, #page2 #right p{
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-top: 1vh;
+    }
+    
+    #page2 #left span{
+        font-size: 1.2rem;
+        margin-top: 2vh;
+    }
+    
+    #page2 #left #mi{
+        margin-left: 4vw;
+    }
+    
+    #classic-a, #mini-a{
+        padding: 1rem 2.5rem;
+        font-size: 1.1rem;
+        margin-bottom: 2vh;
+        display: block;
+        text-align: center;
+        width: fit-content;
+    }
+    
+    #mini-a{
+        margin-left: 0;
+        margin-top: 2vh;
+    }
 }
-#page2 #left #cla{
-    text-decoration: underline;   
+
+/* Small Mobile Styles */
+@media screen and (max-width: 480px) {
+    #navbar {
+        padding: 0 3vw;
+    }
+    
+    #logo {
+        font-size: 1.3rem;
+    }
+    
+    #hero {
+        padding: 0 3vw;
+    }
+    
+    #hero h1{
+        font-size: clamp(1.5rem, 7vw, 4rem);
+    }
+    
+    #hero h2{
+        font-size: clamp(0.9rem, 3.5vw, 2rem);
+    }
+    
+    #hero img{
+        width: clamp(120px, 35vw, 200px);
+        height: 35vh;
+    }
+    
+    #page2 #left, #page2 #right{
+        padding: 3vh 4vw;
+    }
+    
+    #page2 #left h1, #page2 #right h1{
+        font-size: clamp(1.8rem, 8vw, 4rem);
+    }
+    
+    #page2 #left p, #page2 #right p{
+        font-size: 0.9rem;
+    }
+    
+    #classic-a, #mini-a{
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
 }
-#page2 #left #mi{
-    margin-left: 2vw;
+
+/* Landscape Mobile */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+    #hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    #hero #text{
+        margin-top: 0;
+        flex: 1;
+    }
+    
+    #hero img{
+        height: 60vh;
+        margin-top: 0;
+        margin-left: 2vw;
+    }
+    
+    #page2 #left, #page2 #right{
+        padding-top: 10vh;
+    }
 }
