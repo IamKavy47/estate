@@ -1,0 +1,280 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+html,body{
+    font-family:'Poppins', sans-serif;
+    height:100%;
+    width:100%;
+}
+
+/* Melodrama Fonts */
+@font-face {
+    font-family: "melodramaLight";
+    src: url("/Assets/Fonts/Melodrama-Light.ttf");
+}
+@font-face {
+    font-family: "melodramaBold";
+    src: url("/Assets/Fonts/Melodrama-Bold.ttf");
+}
+@font-face {
+    font-family: "melodramaRegular";
+    src: url("/Assets/Fonts/Melodrama-Regular.ttf");
+}
+@font-face {
+    font-family: "melodramaSemiBold";
+    src: url("/Assets/Fonts/Melodrama-Semibold.ttf");
+}
+
+/* Manrope Fonts */
+@font-face {
+    font-family: "manropeLight";
+    src: url("/Assets/Fonts/Manrope-Light.ttf");
+}
+@font-face {
+    font-family: "manropeBold";
+    src: url("/Assets/Fonts/Manrope-Bold.ttf");
+}
+@font-face {
+    font-family: "manropeRegular";
+    src: url("/Assets/Fonts/Manrope-Regular.ttf");
+}
+@font-face {
+    font-family: "manropeExtraBold";
+    src: url("/Assets/Fonts/Manrope-ExtraBold.ttf");
+}
+@font-face {
+    font-family: "manropeExtraLight";
+    src: url("/Assets/Fonts/Manrope-ExtraLight.ttf");
+}
+
+
+/* Page Styles */
+
+#page1{
+    width:100vw;
+    min-height:100vh;
+    background-color: #E8E4D9;
+}
+#page2{
+    width:100vw;
+    min-height:100vh;
+    background-color: #E8E4D9;
+    display: flex;
+}
+#page3{
+    width:100vw;
+    height:100vh;
+    background-color: #fff;
+}
+#page4{
+    width:100vw;
+    height:100vh;
+    background-color: #E8E4D9;
+}
+#page5{
+    width:100vw;
+    height:100vh;
+    background-color: #000;
+}
+#page6{
+    width:100vw;
+    height:100vh;
+    background-color: #fff;
+}
+#page7{
+    width:100vw;
+    height:100vh;
+    background-color: #E8E4D9;
+}
+
+/* Navbar  */
+
+#navbar {
+  width: 100vw;
+  height: 9vh;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2vw;
+}
+
+#logo {
+  font-family: "manropeExtraBold";
+  font-size: 2vw;
+  font-weight: 900;
+  color: #1D202B;
+  text-decoration: none;
+}
+
+#menu {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+}
+
+/* Hamburger Menu */
+#hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  width: 50px;
+  cursor: pointer; 
+}
+
+#hamburger span {
+  height: 1px;
+  width: 100%;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+#hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+  background-color: #fff;
+}
+#hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+#hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -7.5px);
+  background-color: #fff;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #000;
+}
+#hero{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+#hero h1{
+    font-size: 180px;
+    font-family: "melodramaLight";
+    font-weight: 100;
+    line-height: 1;
+}
+#hero h2{
+    font-size: 100px;
+    font-family: "manropeBold";
+    letter-spacing: -5px;
+}
+#hero img{
+    width:16vw;
+    height: 100vh;
+    margin-top: 10vw ;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
+    object-fit: cover;
+}
+#hero #text{
+    text-align: center;
+    margin-top: 35vh;
+}
+#page2 #left,#page2 #right{
+    width: 50%;
+    height: 100%;
+}
+#page2 #left h1{
+    font-size: 240px;
+    font-family: "melodramaSemiBold";
+    color: #171B26;
+}
+#page2 #left{
+    padding-top: 8vh;
+    padding-left: 15vw;
+}
+#page2 #left p{
+    font-size: 24px;
+    color:#171B26 ;
+    font-family: "manropeLight";
+    line-height: 40px;
+}
+#page2 #right{
+    padding-top: 38vh;
+    padding-right: 15vw;
+    padding-left: 4vw;
+}
+#page2 #right p{
+    font-size: 24px;
+    color:#171B26 ;
+    font-family: "manropeLight";
+    line-height: 40px;
+}
+#classic-a , #mini-a{
+    text-decoration: none;
+    padding: 1.5vw 4vw;
+    border-radius:100px;
+    font-size: 32.4px;
+    font-family:"melodramaRegular";
+    color: #E8E4D9;
+}
+#mini-a{
+    margin-left: 1vw;
+    padding: 1.5vw 5vw;
+    background-image: url("/Assets/Images/mini.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+#classic-a{
+    background-image: url("/Assets/Images/classic.png");
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+}
+#classic-a::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+#mini-a::before{
+    content:"";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 100px;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+#classic-a span , #mini-a span{
+    z-index: 2;
+    position: relative;
+}
+#page2 #right h1{
+    font-size: 240px;
+    font-family: "melodramaSemiBold";
+    color: #171B26;
+    margin-left: -4vw;
+    margin-top:5vw;
+}
+#page2 #left span{
+    font-size: 34px;
+    margin-top: 60vh;
+    color: #171B26;
+    font-family: "melodramaBold";
+}
+#page2 #left #cla{
+    text-decoration: underline;   
+}
+#page2 #left #mi{
+    margin-left: 2vw;
+}
